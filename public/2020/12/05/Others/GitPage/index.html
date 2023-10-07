@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>GitPage + Hexo + PicGo | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2020/12/05/Others/GitPage/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2020/12/05/Others/GitPage/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/2020/12/05/Others/GitPage/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2020/12/05/Others/GitPage/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>GitPage + Hexo + PicGo</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        zk 发表于
+        <time datetime="2020-12-05T12:52:57.228Z">2020-12-05</time>
+    </p>
+    <div class="post-content">
+        <h1 id="GitPage"><a href="#GitPage" class="headerlink" title="GitPage"></a>GitPage</h1><p>作者：工匠羅<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/59088760/answer/265741938">https://www.zhihu.com/question/59088760/answer/265741938</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>搭建这个博客走了许多弯路。在这里分享总结之后的思路和简化步骤。</p>
+<ul>
+<li>Github Pages</li>
+<li>Hexo 博客框架</li>
+<li>部署</li>
+<li>Next 主题</li>
+</ul>
+<h2 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a><strong>Github Pages</strong></h2><p>Github Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页，展示出来。</p>
+<p><strong>操作如下：</strong> </p>
+<p><strong>1. 注册 Github 账号，然后在 Github 中创建一个以 .<a href="https://link.zhihu.com/?target=http://github.io">http://github.io</a> 结尾的 Repository。</strong></p>
+<ol>
+<li><ol>
+<li>Repository name: <a href="https://link.zhihu.com/?target=http://ryanluoxu.github.io">http://ryanluoxu.github.io</a></li>
+<li>勾选 Initialize this repository with a README</li>
+<li>Create repository</li>
+</ol>
+</li>
+</ol>
+<p><strong>2. 简单地编辑一下 README.md 这个文档。 比如添加：I am trying to create my own blog.. 保存(Commit changes)。</strong></p>
+<p><strong>3. 打开网页：<a href="https://link.zhihu.com/?target=http://ryanluoxu.github.io">http://ryanluoxu.github.io</a> 这里就可以看到 README.md 里的内容了。</strong></p>
+<p>如果没有太多的要求，其实直接用 README.md 来写博客也是不错的。这个生成好的 Repository 就是用来存放博客内容的地方，也只有这个仓库里的内容，才会被 <a href="https://link.zhihu.com/?target=http://ryanluoxu.github.io">http://ryanluoxu.github.io</a> 这个网页显示出来。</p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a><strong>Hexo</strong></h2><p>Hexo 是一个博客框架。它把本地文件里的信息生成一个网页。如果不需要放在网上给别人看，就没 Github Pages 什么事了。</p>
+<p>使用 Hexo 之前，需要先安装 Node.js 和 Git。</p>
+<p><strong>操作如下：</strong></p>
+<p><strong>1. 安装 Node.js</strong></p>
+<ul>
+<li>前往 <a href="https://link.zhihu.com/?target=https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+<li>点击 8.9.1 LTS 下载</li>
+<li>安装</li>
+<li>打开 Command Prompt， 输入 <code>node -v</code></li>
+<li>得到：v8.9.1</li>
+</ul>
+<p>安装成功</p>
+<p><strong>2. 安装 Git</strong></p>
+<ul>
+<li>前往 <a href="https://link.zhihu.com/?target=https://git-scm.com/">https://git-scm.com/</a></li>
+<li>点击 Downloads</li>
+<li>点击 Windows</li>
+<li>一般情况，下载会自动开始。如果没有，就点击 click here to download manually</li>
+<li>安装</li>
+<li>打开 Command Prompt， 输入 <code>git --version</code></li>
+<li>得到：git version 2.15.0.windows.1</li>
+</ul>
+<p>安装成功</p>
+<p>额外说明：如果 Git –version 指令不管用，可能需要到 Environment Variable 那里添加 Path。</p>
+<p><strong>3. 安装 Hexo</strong></p>
+<ul>
+<li><ul>
+<li>打开 Command Prompt</li>
+<li>输入 <code>npm install -g hexo-cli</code></li>
+<li>回车开始安装</li>
+<li>输入 <code>hexo -v</code></li>
+<li>得到 hexo-cli: 1.0.4 等一串数据</li>
+</ul>
+</li>
+</ul>
+<p>安装成功</p>
+<p><strong>4. 创建本地博客</strong></p>
+<ul>
+<li><ul>
+<li>在D盘下创建文件夹 blog</li>
+<li>鼠标右键 blog，选择 Git Bash Here。 如果没有安装 Git，就不会有这个选项。</li>
+<li>Git Bash 打开之后，所在的位置就是 blog 这个文件夹的位置。（/d/blog）</li>
+<li>输入 <code>hexo init</code> 将 blog 文件夹初始化成一个博客文件夹。</li>
+<li>输入 <code>npm install</code> 安装依赖包。</li>
+<li>输入 <code>hexo g</code> 生成（generate）网页。 由于我们还没创建任何博客，生成的网页会展示 Hexo 里面自带了一个 Hello World 的博客。</li>
+<li>输入 <code>hexo s</code> 将生成的网页放在了本地服务器（server）。</li>
+<li>浏览器里输入 <a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000/</a> 。 就可以看到刚才的成果了。</li>
+<li>回到 Git Bash，按 Ctrl+C 结束。</li>
+</ul>
+</li>
+</ul>
+<p>此时再看 <a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000/</a> 就是无法访问了。</p>
+<p><strong>5. 发布一篇博客</strong></p>
+<ul>
+<li><ul>
+<li>继续在 Git Bash 里，所在路径还是 /d/blog。输入 <code>hexo new &quot;My First Post&quot;</code></li>
+<li>在 D:\blog\source_posts 路径下，会有一个 My-First-Post.md 的文件。 编辑这个文件，然后保存。</li>
+<li>回到 Git Bash，输入 <code>hexo g</code></li>
+<li>输入 <code>hexo s</code></li>
+<li>前往 <a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000/</a> 查看成果。</li>
+<li>回到 Git Bash，按 Ctrl+C 结束。</li>
+</ul>
+</li>
+</ul>
+<h2 id="将本地-Hexo-博客部署在-Github-上"><a href="#将本地-Hexo-博客部署在-Github-上" class="headerlink" title="将本地 Hexo 博客部署在 Github 上"></a><strong>将本地 Hexo 博客部署在 Github 上</strong></h2><p>前面两个部分，我们已经有了本地博客，和一个能托管这些资料的线上仓库。只要把本地博客部署（deploy）在我们的 Github 对应的 Repository 就可以了。</p>
+<p><strong>1. 获取 Github 对应的 Repository 的链接。</strong></p>
+<ul>
+<li>登陆 Github，进入到 <a href="https://link.zhihu.com/?target=http://ryanluoxu.github.io">http://ryanluoxu.github.io</a></li>
+<li>点击 Clone or download</li>
+<li>复制 URL 待用</li>
+</ul>
+<p>我的是 <code>https://github.com/Ryanluoxu/ryanluoxu.github.io.git</code></p>
+<p><strong>2. 修改博客的配置文件</strong></p>
+<ul>
+<li><ul>
+<li>打开配置文件 /d/blog/_config.yml （使用 bash 里的 vi 或者 notepad++）</li>
+<li>找到 <code>#Deployment</code>，填入以下内容：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:    type: git    repository: https:&#x2F;&#x2F;github.com&#x2F;Ryanluoxu&#x2F;ryanluoxu.github.io.git    branch: master </span><br><span class="line">保存退出</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3. 部署</strong></p>
+<ul>
+<li><ul>
+<li>回到 Git Bash</li>
+<li>输入 <code>npm install hexo-deployer-git --save</code> 安装 hexo-deployer-git 此步骤只需要做一次。</li>
+<li>输入 <code>hexo d</code></li>
+<li>得到 <code>INFO Deploy done: git</code> 即为部署成功</li>
+</ul>
+</li>
+</ul>
+<p>之前我们创建的 ReadMe.md 会被自动覆盖掉。</p>
+<p><strong>4. 查看成果</strong></p>
+<p>前往 <a href="https://link.zhihu.com/?target=http://ryanluoxu.github.io">http://ryanluoxu.github.io</a> 即可。</p>
+<h2 id="使用-Next-主题"><a href="#使用-Next-主题" class="headerlink" title="使用 Next 主题"></a><strong>使用 Next 主题</strong></h2><p><a href="https://link.zhihu.com/?target=https://hexo.io/themes/">更多 Hexo 的主题看这里</a></p>
+<p>这里以 Next 为例。 大概思路就是把整个主题的文件克隆到我们的主题文件夹中。在配置文件中注明使用该主题。</p>
+<p><strong>操作如下：</strong></p>
+<p><strong>1. 还是回到 Git Bash。 输入</strong> <code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+<p>这样，该主题的文件就全部克隆到 D:\blog\themes\next 下面。</p>
+<p><strong>2. 修改博客配置文件</strong></p>
+<ul>
+<li><ul>
+<li>打开 D:\blog_config.yml</li>
+<li>找到 <code>theme:</code></li>
+<li>把 Hexo 默认的 lanscape 修改成 next。 即 <code>theme: next</code></li>
+<li>找到 <code># Site</code>，添加博客名称，作者名字等。</li>
+<li>在 <code>language</code> 后面填入 en 或者 zh-Hans，选择英文或者中文。</li>
+<li>找到 <code># URL</code>, 填入 url。比如 <code>url: https://ryanluoxu.github.io</code></li>
+</ul>
+</li>
+</ul>
+<p>填入名字后会有很风骚的 © 2017 Ryan Luo Xu 的字样出现在博客底部。</p>
+<p><strong>3. 重新生成部署即可</strong></p>
+<ul>
+<li><ul>
+<li>回到 Git Bash。输入 <code>hexo g -d</code>就可以了。</li>
+</ul>
+</li>
+</ul>
+<p>先把修改的内容生成网页，再部署。</p>
+<p><strong>4. 查看成果</strong></p>
+<p>前往 <a href="https://link.zhihu.com/?target=http://ryanluoxu.github.io">http://ryanluoxu.github.io</a> 即可。</p>
+<p>搭建好之后，继续个性化的设置参考：’’’’</p>
+<h2 id="配置-PicGo-CDN-加速"><a href="#配置-PicGo-CDN-加速" class="headerlink" title="配置 PicGo (CDN 加速)"></a>配置 PicGo (CDN 加速)</h2><p><img src="https://mmbiz.qpic.cn/mmbiz_png/R5ic1icyNBNd7t0Yic5aTV1rqBJKicYJ6an6pMTyqIZuaRkfbRXUmLpicpyfjpGRRUVyww2cS88fa5nRkcBb5eA0PQA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="img"></p>
+<ul>
+<li><p>仓库名：用户名/仓库名</p>
+</li>
+<li><p>分支名：所属分支</p>
+</li>
+<li><p>token：</p>
+</li>
+<li><p><img src="https://mmbiz.qpic.cn/mmbiz_png/R5ic1icyNBNd7t0Yic5aTV1rqBJKicYJ6an6ZIhtiblBUicYOf3pJlujt4WKiavibPjnSfWawA2jKWZ5I76FFp83fccN5g/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="img"></p>
+</li>
+</ul>
+<ul>
+<li>指定路径：仓库下的指定文件夹</li>
+<li>自定义域名：使用了 CDN 加速，配置格式为：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名&#x2F;仓库名</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>设置 Typora</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/R5ic1icyNBNd7t0Yic5aTV1rqBJKicYJ6an6KE2AgAOzPrLYBIic0Gh5Q064ymU8EqzmWJJj8XfibialoaatcmN1QSteg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/R5ic1icyNBNd7t0Yic5aTV1rqBJKicYJ6an6pQhFF2BIEQDWNQrFom7jCibf1fBZm4miaWECib807y0EpohrS3YBDRwOg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="img"></p>
+<p>如果出现以下情况：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/R5ic1icyNBNd7t0Yic5aTV1rqBJKicYJ6an6z8OSeopfdNCF3icI5y5DulNHaibw72wcb3js7lwWFh5KSZarFa9u1qKQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="img"></p>
+<p>点击PicGo界面左侧的PicGo设置-&gt;设置Server，并按下图设置（默认已设置）</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/R5ic1icyNBNd7t0Yic5aTV1rqBJKicYJ6an6zdIaCw3R0mibSs3GzEvLtFrEVWW9BkFI1cwHticw8b5KDlHvOIPn3aicA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="img"></p>
+<p>至此，便可通过 Typora 优雅的编写 Markdown 文档，图片粘贴到文档就能够自动上传到 github 图床了。</p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/ly1246621281/PicGo/main/img/image-20201205205536651.png" alt="image-20201205205536651"></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/Others/">Others</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/hexo/" title="hexo">hexo</a> / 
+    
+        <a href="/tags/website/" title="website">website</a> / 
+    
+        <a href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2020/12/06/Others/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+            
+                hexo常用命令
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2020/12/05/hello-world/">
+            
+                Hello
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  
+<script src="/js/comment.js"></script>
+
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'Others/GitPage' || '2020/12/05/Others/GitPage/',
+    owner: 'ly1246621281',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/JAVA/">JAVA</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696660577577.js"></script>
+
+</body>
+</html>

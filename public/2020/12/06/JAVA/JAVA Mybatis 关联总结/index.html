@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2020/12/06/JAVA/JAVA%20Mybatis%20%E5%85%B3%E8%81%94%E6%80%BB%E7%BB%93/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2020/12/06/JAVA/JAVA%20Mybatis%20%E5%85%B3%E8%81%94%E6%80%BB%E7%BB%93/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/2020/12/06/JAVA/JAVA%20Mybatis%20%E5%85%B3%E8%81%94%E6%80%BB%E7%BB%93/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2020/12/06/JAVA/JAVA%20Mybatis%20%E5%85%B3%E8%81%94%E6%80%BB%E7%BB%93/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span></span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2020-12-06T09:57:49.186Z">2020-12-06</time>
+    </p>
+    <div class="post-content">
+        <h1 id="JAVA-Mybatis-关联总结"><a href="#JAVA-Mybatis-关联总结" class="headerlink" title="JAVA Mybatis 关联总结"></a>JAVA Mybatis 关联总结</h1><h2 id="tip"><a href="#tip" class="headerlink" title="tip:"></a>tip:</h2><p>​    需求是三表关联，搞了三个实体类用activity_id做关联键，所以设计了一个实体类（包括基本类型活动号和三个表对应的三个实体类）。</p>
+<p>用到了resultMap中的associate和实体类映射。</p>
+<p><strong>association: 一对一关联(has one)</strong><br><strong>collection:一对多关联(has many)</strong></p>
+<h2 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h2><p>一对一（associate）的三种使用方式</p>
+<h3 id="1、第一种用法-association中使用select"><a href="#1、第一种用法-association中使用select" class="headerlink" title="1、第一种用法:association中使用select"></a>1、第一种用法:association中使用select</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;User&quot;</span> <span class="attr">id</span>=<span class="string">&quot;userMap&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;userName&quot;</span> <span class="attr">column</span>=<span class="string">&quot;user_name&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;age&quot;</span> <span class="attr">column</span>=<span class="string">&quot;age&quot;</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;card&quot;</span> <span class="attr">column</span>=<span class="string">&quot;card_id&quot;</span> <span class="attr">select</span>=<span class="string">&quot;com.zhu.ssm.dao.      CardDao.queryCardById&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">association</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;queryCardById&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;int&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Card&quot;</span>&gt;</span></span><br><span class="line">        SELECT *</span><br><span class="line">        FROM tb_card</span><br><span class="line">        WHERE card_id=#&#123;cardId&#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用select是每次将 关联值 传给 column=“card_id”列</p>
+<ul>
+<li><p>嵌套查询:通过执行另外一个 SQL 映射语句来返回预期的复杂类型。会造成N+1现象，查询性能，不推荐</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>column</code></td>
+<td>来自数据库的列名,或重命名的列标签。这和通常传递给 resultSet.getString(columnName)方法的字符串是相同的。 column 注 意 : 要 处 理 复 合 主 键 , 你 可 以 指 定 多 个 列 名 通 过 column= “ {prop1=col1,prop2=col2} “ 这种语法来传递给嵌套查询语 句。这会引起 prop1 和 prop2 以参数对象形式来设置给目标嵌套查询语句。</td>
+</tr>
+<tr>
+<td><code>select</code></td>
+<td>另外一个映射语句的 ID,可以加载这个属性映射需要的复杂类型。获取的 在列属性中指定的列的值将被传递给目标 select 语句作为参数。表格后面 有一个详细的示例。 select 注 意 : 要 处 理 复 合 主 键 , 你 可 以 指 定 多 个 列 名 通 过 column= “ {prop1=col1,prop2=col2} “ 这种语法来传递给嵌套查询语 句。这会引起 prop1 和 prop2 以参数对象形式来设置给目标嵌套查询语句。</td>
+</tr>
+<tr>
+<td><code>fetchType</code></td>
+<td>Optional. Valid values are <code>lazy</code> and <code>eager</code>. If present, it supersedes the global configuration parameter <code>lazyLoadingEnabled</code> for this mapping.</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/mybatis/f4uw1ilx.html">参考示例</a></p>
+</li>
+</ul>
+</blockquote>
+<h3 id="2、第二种方法，嵌套resultMap"><a href="#2、第二种方法，嵌套resultMap" class="headerlink" title="2、第二种方法，嵌套resultMap"></a>2、第二种方法，嵌套resultMap</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;Card&quot;</span> <span class="attr">id</span>=<span class="string">&quot;cardMap&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span> <span class="attr">property</span>=<span class="string">&quot;cardId&quot;</span> <span class="attr">column</span>=<span class="string">&quot;card_id&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;cardNum&quot;</span> <span class="attr">column</span>=<span class="string">&quot;card_num&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;address&quot;</span> <span class="attr">column</span>=<span class="string">&quot;address&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;User&quot;</span> <span class="attr">id</span>=<span class="string">&quot;userMap&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;userName&quot;</span> <span class="attr">column</span>=<span class="string">&quot;user_name&quot;</span>/&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;age&quot;</span> <span class="attr">column</span>=<span class="string">&quot;age&quot;</span>/&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;card&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;cardMap&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">association</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>第二种方法就是在UserDao.xml中先定义一个Card的resultMap，然后在User的resultMap的association标签中通过resultMap=”cardMap”引用。这种方法相比于第一种方法较为简单。</p>
+<p><strong>主要是可以resultmap 复用</strong></p>
+<h3 id="3、第三种方法-嵌套resultMap简化版"><a href="#3、第三种方法-嵌套resultMap简化版" class="headerlink" title="3、第三种方法:嵌套resultMap简化版"></a>3、第三种方法:嵌套resultMap简化版</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;User&quot;</span> <span class="attr">id</span>=<span class="string">&quot;userMap&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;userName&quot;</span> <span class="attr">column</span>=<span class="string">&quot;user_name&quot;</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;age&quot;</span> <span class="attr">column</span>=<span class="string">&quot;age&quot;</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;card&quot;</span> <span class="attr">column</span>=<span class="string">&quot;card_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;Card&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span> <span class="attr">property</span>=<span class="string">&quot;cardId&quot;</span> <span class="attr">column</span>=<span class="string">&quot;card_id&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;cardNum&quot;</span> <span class="attr">column</span>=<span class="string">&quot;card_num&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;address&quot;</span> <span class="attr">column</span>=<span class="string">&quot;address&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">association</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<p>这种方法就把Card的resultMap定义在了association 标签里面，通过javaType来指定是哪个类的resultMap，个人认为这种方法最简单，缺点就是cardMap不能复用。具体用哪种方法，视情况而定。</p>
+<p>作者：贪挽懒月<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/018c0f083501">https://www.jianshu.com/p/018c0f083501</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="4、Collection同-associate"><a href="#4、Collection同-associate" class="headerlink" title="4、Collection同 associate"></a>4、Collection同 associate</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;User&quot;</span> <span class="attr">id</span>=<span class="string">&quot;userMap&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;userName&quot;</span> <span class="attr">column</span>=<span class="string">&quot;user_name&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;age&quot;</span> <span class="attr">column</span>=<span class="string">&quot;age&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">collection</span> <span class="attr">property</span>=<span class="string">&quot;mobilePhone&quot;</span> <span class="attr">column</span>=<span class="string">&quot;user_id&quot;</span> <span class="attr">ofType</span>=<span class="string">&quot;MobilePhone&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">&quot;mobile_phone_id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;mobilePhoneId&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;brand&quot;</span> <span class="attr">property</span>=<span class="string">&quot;brand&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;price&quot;</span> <span class="attr">property</span>=<span class="string">&quot;price&quot;</span> /&gt;</span></span><br><span class="line"> 	<span class="tag">&lt;/<span class="name">collection</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5、id-amp-result"><a href="#5、id-amp-result" class="headerlink" title="5、id &amp; result"></a>5、id &amp; result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;id property&#x3D;&quot;id&quot; column&#x3D;&quot;post_id&quot;&#x2F;&gt;</span><br><span class="line">&lt;result property&#x3D;&quot;subject&quot; column&#x3D;&quot;post_subject&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这些是结果映射最基本内容。id 和 result 都映射一个单独列的值到简单数据类型(字符 串,整型,双精度浮点数,日期等)的单独属性或字段。</p>
+<p>这两者之间的唯一不同是 id 表示的结果将是当比较对象实例时用到的标识属性。这帮 助来改进整体表现,特别是缓存和嵌入结果映射(也就是联合映射) 。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>使用过程模仿第三种嵌套方式，不一致的是将每个关联表均设置为一个实体类，使用关联键<id>标签关联。</p>
+<ul>
+<li>resultMap</li>
+</ul>
+<p><img src="C:\Users\zhangkai324\AppData\Roaming\Typora\typora-user-images\image-20201008164022322.png" alt="image-20201008164022322"></p>
+<ul>
+<li>sql</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;downloadTransform&quot;</span>  <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;downloadEntity&quot;</span>&gt;</span></span><br><span class="line">        select a.activity_id as &#x27;activity_id&#x27;,&#x27;&#x27; as &#x27;empty&#x27;,</span><br><span class="line">           a.*,b.*,c.*</span><br><span class="line">        from</span><br><span class="line">        (<span class="tag">&lt;<span class="name">include</span> <span class="attr">refid</span>=<span class="string">&quot;downloadActivityInfo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">include</span>&gt;</span>)a</span><br><span class="line">        left join</span><br><span class="line">        (<span class="tag">&lt;<span class="name">include</span> <span class="attr">refid</span>=<span class="string">&quot;downloadTransformInfo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">include</span>&gt;</span>)b</span><br><span class="line">        on a.activity_id = b.activity_id</span><br><span class="line">        left join</span><br><span class="line">        (<span class="tag">&lt;<span class="name">include</span> <span class="attr">refid</span>=<span class="string">&quot;getUserCountByActivity&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">include</span>&gt;</span>)c</span><br><span class="line">        on a.activity_id = c.activity_id</span><br><span class="line"> <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>实体类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span> <span class="comment">//全参构造函数</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span>  <span class="comment">//无参构造函数</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DownloadTransformDetailsPO</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long activityId;</span><br><span class="line">    <span class="keyword">private</span> String empty;</span><br><span class="line">    </span><br><span class="line">    DownloadActivityPO downloadActivityPO;</span><br><span class="line">    DownloadTransformPO downloadTransformPO;</span><br><span class="line">    DownloadUserPO downloadUserPO;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<p>@Builder只会生成有参的构造方法，会取消默认的无参构造方法。</p>
+<p><img src="C:\Users\zhangkai324\AppData\Roaming\Typora\typora-user-images\image-20201008201207621.png" alt="image-20201008201207621"></p>
+<p>若关联的实体类未提供无参构造函数，可能出现indexOutofBounds异常  或者 类型不匹配，走的构造函数是有参构造函数那块。</p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/JAVA/">JAVA</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2020/12/06/JAVA/JAVA%20%E8%AF%B7%E6%B1%82%E6%8E%A5%E6%94%B6Date%E7%B1%BB%E5%9E%8BOR%20%E8%BF%94%E5%9B%9EDate%E7%B1%BB%E5%9E%8B/">
+            
+                无标题
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2020/12/06/Others/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+            
+                hexo常用命令
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  
+<script src="/js/comment.js"></script>
+
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'JAVA/JAVA Mybatis 关联总结' || '2020/12/06/JAVA/JAVA Mybatis 关联总结/',
+    owner: 'ly1246621281',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/JAVA/">JAVA</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696660577575.js"></script>
+
+</body>
+</html>
